@@ -1,6 +1,6 @@
-bookardo = new Book("An title", "anAuthor", "220", true);
+bookardo = new Book("An title", "anAuthor", "220", "Yes");
 
-let books = [bookardo, bookardo, bookardo, bookardo, bookardo, bookardo, bookardo, bookardo, bookardo, bookardo, bookardo, bookardo, bookardo, bookardo, bookardo, bookardo, bookardo, bookardo, bookardo, bookardo]
+let books = [bookardo]
 
 const addBookBtn = document.querySelector("#add-new-book");
 const booksContainer = document.querySelector("#books-container");
@@ -53,7 +53,7 @@ function render() {
 
         let readBtn = document.createElement("button");
 
-        book.read ? readBtn.textContent = "Mark as unread" : readBtn.textContent = "Mark as read";
+        book.read === "Yes" ? readBtn.textContent = "Mark as unread" : readBtn.textContent = "Mark as read";
         readBtn.setAttribute("type", "button");
         readBtn.classList.add("read-btn");
 
@@ -61,7 +61,7 @@ function render() {
 
         removeBtn.addEventListener("click", removeCard);
         readBtn.addEventListener("click", () => {
-            book.read ? book.read = false : book.read = true;
+            book.read === "Yes" ? book.read = "No" : book.read = "Yes";
             render();
 
         });
@@ -105,15 +105,14 @@ function addNewBook() {
         document.querySelector("#finishBtn").disabled = true;
     }
     else {
-        console.log("i am here")
-        let read;
-        readElement.checked ? read = true :
-            read = false;
+        let readValue;
+        readElement.checked ? readValue = "Yes" :
+            readValue = "No";
         titleElement.value = ""
         authorElement.value = ""
         pagesElement.value = ""
         readElement.checked = true;
-        let aBook = new Book(title, author, pages, read)
+        let aBook = new Book(title, author, pages, readValue)
         addBooks(aBook);
     }
 

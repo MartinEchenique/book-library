@@ -110,3 +110,13 @@ width: 50px;
     flex-direction: column;
 
 }
+#read-buttons-text{
+
+    margin-bottom:0px;
+    padding-bottom:0px;
+}
+
+#form-buttons{
+    margin-top:15px;
+
+}

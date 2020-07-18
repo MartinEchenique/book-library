@@ -16,23 +16,29 @@
     </header>
     <form id="add-new-book-form" style="display: none;">
         <div id="title-input-div">
-            <label for="title-input">Book's name:</label>
+            <label for="title-input">Title:</label>
             <input type="text" id="title-input" name="title"></div>
         <div id="author-input-div">
-            <label for="author-input">Author's name:</label>
+            <label for="author-input">Author:</label>
             <input type="text" id="author-input"></div>
         <div id="pages-input-div">
             <label for="pages-input">Number of pages:</label>
             <input type="number" id="pages-input"></div>
         <div id="read-input-div">
-            <p>did you read it?</p>
-            <input type="radio" id="read-input-yes" name="read-input" value="yes" checked>
-            <label for="read-input-yes">Yes</label>
-            <input type="radio" id="read-input-no" name="read-input" value="no">
-            <label for="read-input-no">No</label>
+            <div>
+                <p id="read-buttons-text">Did you read it?</p>
+            </div>
+            <div>
+                <input type="radio" id="read-input-yes" name="read-input" value="Yes" checked>
+                <label for="read-input-yes">Yes</label>
+                <input type="radio" id="read-input-no" name="read-input" value="No">
+                <label for="read-input-no">No</label>
+            </div>
         </div>
-        <button type="button" id="addBtn">Add</button>
-        <button id="finishBtn" type="button">Finish</button>
+        <div id="form-buttons">
+            <button type="button" id="addBtn">Add</button>
+            <button id="finishBtn" type="button">Finish</button>
+        </div>
         <div id="alert">
             <p>All fields must be filled</p>
             <button id="alertBtn" type="button">ok</button>
