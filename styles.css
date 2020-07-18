@@ -1,0 +1,112 @@
+body{
+    background-color:#e0d5c4;
+    padding-top: 80px;
+    
+
+}
+header{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    height: 85px;
+    background-color:rgb(236 206 159 / 45%);
+    display: flex;    
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+h1{
+    font-family: 'Sunshiney', cursive;
+    font-size: 60px;
+    margin: auto;
+}
+
+#add-new-book{
+
+    background-color: rgb(0, 128, 0);
+    margin-left: 10px;
+    border:solid;
+    border-color:  rgb(1, 66, 1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+#books-container{
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+.book-card{
+    margin:10px;
+    padding: 15px;
+    background-color:rgb(212 182 135) ;
+    box-shadow: 5px 3px 10px 1px;
+    border-radius: 10px;
+    border: 2px outset rgb(214, 214, 214);
+}
+
+.title{
+    border: double;
+    background-color: rgba(255,255,255,0.6);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 5px;
+
+}
+
+.remove-btn{
+    border-radius: 50%;
+    border:solid;
+    border-color: rgb(248, 155, 155);
+    font-weight: bold;
+    background-color:rgb(245, 108, 108);
+}
+
+p.author, p.numpages, p.read{
+    background-color: rgba(255,255,255,0.9);
+    padding:3px;
+    border-radius: 3px;
+    border:1px solid;
+    
+}
+
+#add-new-book-form{
+    position: absolute;
+    display:none;
+    width  : 300px;
+    max-height: 350px;
+    border-radius: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(230 198 149);
+    box-shadow: 5px 3px 10px 3px;
+    padding : 10px;
+}
+#alert{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 5px 3px 10px 1px;
+    border-radius: 10px;
+    position: absolute;
+    top :60px;
+    width  : 200px;
+    height: 100px;
+
+}
+#alertBtn{
+width: 50px;
+
+}
+#title-input-div, #author-input-div, #pages-input-div,#read-input-div{
+    display: flex;
+    flex-direction: column;
+
+}
