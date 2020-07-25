@@ -1,6 +1,4 @@
-bookardo = new Book("An title", "anAuthor", "220", "Yes");
 
-let books = [bookardo]
 
 const addBookBtn = document.querySelector("#add-new-book");
 const booksContainer = document.querySelector("#books-container");
@@ -8,18 +6,24 @@ const addBookForm = document.querySelector("#add-new-book-form");
 
 addBookBtn.addEventListener("click", bringNewbookForm);
 
-function Book(title, author, numpages, read) {
-    this.title = title;
-    this.author = author;
-    this.numpages = numpages;
-    this.read = read;
-    this.info = function () {
+class Book {
+    constructor(title, author, numpages, read) {
+        this.title = title;
+        this.author = author;
+        this.numpages = numpages;
+        this.read = read;
+    }
+    info() {
         let info = title + " by " + author + ", " + numpages + ", " + read;
         return info
 
     }
 
 }
+bookardo = new Book("An title", "anAuthor", "220", "Yes");
+
+let books = [bookardo]
+
 
 function addBooks(book) {
     books.push(book);
@@ -79,7 +83,7 @@ function render() {
 }
 
 function removeCard() {
-    books.splice(this.data, 1);
+    books.splice(this.parentElement.getAttribute("data"), 1);
     render();
 
 }
